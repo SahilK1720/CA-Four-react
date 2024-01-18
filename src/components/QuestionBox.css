@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Halant:wght@500&display=swap');
+
+.main-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    font-family: 'Halant', serif;
+    background-color: #E5E5CB;
+}
+
+
+.quiz-container{
+    display: flex;
+    flex-direction: column;
+    background-color: #D5CEA3;
+    width: 75vw;
+    height: 35vw;
+    color: black;
+    padding-inline: 2vw ;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -5px 0px 0px 0px rgb(134,134,243);
+}
+
+h2{
+    font-size: 2.4rem;
+}
+
+h3{
+    font-size: 1.4rem;
+}
+
+.page{
+    align-self: start;
+    margin-top: -10px;
+}
+
+.options{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    margin-top: 7.5vh;
+    column-gap: -100px;
+    row-gap: 2vh;
+}
+
+.opt-btn{
+    width: 38vw;
+    height: 6.5vh;
+    border-radius: 100px;
+    background-color: #A8A880;
+    border: none;
+}
+
+.actions{
+    margin-top: 8.5vh;
+    display: flex;
+    justify-content: center;
+    column-gap: 2.4vw;
+}
+
+.highlight{
+    width: 20vw;
+    height: 6vh;
+    background-color: #CB1818;
+    color: #ECECEC;
+    border-radius: 0;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 14px;
+}
+
+.rem-highlight{
+    width: 20vw;
+    height: 6vh;
+    background-color: #CB1818;
+    color: #ECECEC;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 14px;
+}
