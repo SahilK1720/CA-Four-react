@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+}
+
+.navbar-cont{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: -15vh;
+    padding-block: 2vh;
+    padding-left: 2vw;
+    padding-right: 6vw;
+    background-color: #E5E5CB;
+}
+
+.logo-div{
+    justify-self: center;
+}
+
+.logo{
+    height: 5vw;
+    width: 20vw;
+}
+
+.dark-mode-btn{
+    height: 3vw;
+    width: 8vw;
+    border-radius: 30px;
+    border: none;
+    color: #E5E5CB;
+    font-size: 1.2rem;
+}
+
+.dark-mode-btn:hover{
+    animation: 1s ease 0s normal none pulsate;
+    opacity: 1;
+}

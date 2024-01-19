@@ -1,0 +1,45 @@
+.result-container{
+    margin-top: 10vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #D5CEA3;
+    min-width: 76vw;
+    min-height: 70vh;
+    color: black;
+    padding-inline: 2vw ;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid #1E1E1E;
+    box-shadow: 10px 10px 0px 0px rgba(30, 30, 30, 0.78);
+}
+
+.result-container h1{
+    font-size: 4rem;
+    margin-bottom: 1.8vw;
+}
+
+.percent{
+    margin-top: 2vw;
+    margin-bottom: -2vw;
+    font-size: 2.4rem;
+}
+
+.restart-btn{
+    margin-top: 8vw;
+    width: 35vh;
+    height: 6vh;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background-color: #CB1818;
+    color: #ECECEC;
+    border-radius: 0;
+    font-size: 1.3rem;
+    border: none;
+    box-shadow: 5px 5px 0px 0px rgba(53, 53, 53, 0.78);
+    border-radius: 6px;
+}
+
+.restart-btn:hover{
+    animation: 1s ease 0s normal none pulsate;
+    opacity: 1;
+}
