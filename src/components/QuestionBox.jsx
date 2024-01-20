@@ -4,30 +4,31 @@ import "./QuestionBox.css";
 import questions from '../questions'; 
 
 export default function QuestionBox(props) {
-
+  // Theme passed from parent component (App.jsx)
   const theme = props.theme;
 
+  // Styles for light and dark themes
   const questContLight = {
     "backgroundColor": "#D5CEA3",
-  }
-
+  };
   const questContDark = {
     "backgroundColor": "#868161"
-  }
+  };
 
+  // State for managing quiz
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [highlight, setHighlight] = useState(false);
+
+  // State for dynamic styling based on theme
   const [questContStyle, setContStyle] = useState(questContLight);
 
-
-
-
+  // Updates component style when theme changes
   useEffect(() => {
-    setContStyle(theme == "dark" ?  questContDark : questContLight)
-  },[theme]);
+    setContStyle(theme === "dark" ? questContDark : questContLight);
+  }, [theme]);
 
-  // Handle click on option button
+  // Function to handle option button click
   const handleClick = (isCorrect) => {
     if (isCorrect) {
       setScore(score + 1);
@@ -35,12 +36,12 @@ export default function QuestionBox(props) {
     setCurrentQuestion(currentQuestion + 1);
   };
 
-  // Handle highlight button click
+  // Function to toggle highlighting of question text
   const toggleHighlight = () => {
     setHighlight(!highlight);
   };
 
-  // Reset the quiz
+  // Function to reset the quiz
   const resetQuiz = () => {
     setCurrentQuestion(0);
     setScore(0);
@@ -49,7 +50,8 @@ export default function QuestionBox(props) {
 
   return (
     <>
-      {currentQuestion < questions.length ? ( // To display result after last question
+      {currentQuestion < questions.length ? (
+        // Rendering the quiz container
         <div className="main-cont">
           <div className="quiz-container" style={questContStyle}>
             <div className="page">
@@ -57,7 +59,7 @@ export default function QuestionBox(props) {
             </div>
 
             <div className="question">
-              <h3 style={{ color: highlight ? '#A40000' : '#272727' }}>{questions[currentQuestion].text}</h3>
+              <h3 style={{ color: highlight ? '#AD0D0D' : '#272727' }}>{questions[currentQuestion].text}</h3>
             </div>
 
             <div className="options">
@@ -80,7 +82,8 @@ export default function QuestionBox(props) {
           </div>
         </div>
       ) : (
-        <Result score={score} reset={resetQuiz}/> // Shows result when all questions are answered
+        // Rendering the Result component when all questions are answered
+        <Result score={score} reset={resetQuiz} theme={theme}/>
       )}
     </>
   );

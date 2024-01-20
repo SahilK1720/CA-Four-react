@@ -13,22 +13,19 @@
     background-color: #E5E5CB;
 }
 
-.logo-div{
-    justify-self: center;
-}
-
 .logo{
     height: 5vw;
     width: 20vw;
 }
 
 .dark-mode-btn{
-    height: 3vw;
-    width: 8vw;
+    height: 3.3vw;
+    width: 8.3vw;
     border-radius: 30px;
     border: none;
     color: #E5E5CB;
     font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .dark-mode-btn:hover{
